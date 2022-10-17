@@ -8,9 +8,8 @@
   "scripts": {
     "start": "node ./build/server.js",
     "build": "tsc -p .",
-    "dev": "nodemon ./src/server.ts",
-    "knex": "./node_modules/.bin/knex --knexfile src/database/knexfile.ts",
-    "test": "jest --detectOpenHandles --coverage --verbose --forceExit --watchAll"
+    "dev": "nodemon ./src/index.ts",
+    "test": "jest"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
