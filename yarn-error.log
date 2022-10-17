@@ -1,0 +1,41 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add typescript
+
+PATH: 
+  /Applications/XAMPP/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Applications/XAMPP/bin:/opt/local/bin:/opt/local/sbin:/Users/ElvisO/Workspace-apps/flutter/bin:/Users/ElvisO/Workspace-apps/flutter/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: read ETIMEDOUT
+      at TLSWrap.onStreamRead (node:internal/stream_base_commons:220:20)
+
+npm manifest: 
+  {
+    "name": "enyata",
+    "version": "1.0.0",
+    "description": "Small e-commerce test app",
+    "main": "index.js",
+    "author": "Elvis Onobo",
+    "license": "MIT",
+    "scripts": {
+      "start": "node ./build/server.js",
+      "build": "tsc -p .",
+      "dev": "nodemon ./src/server.ts",
+      "knex": "./node_modules/.bin/knex --knexfile src/database/knexfile.ts",
+      "test": "jest --detectOpenHandles --coverage --verbose --forceExit --watchAll"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
