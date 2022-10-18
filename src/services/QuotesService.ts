@@ -1,14 +1,20 @@
 import axios from 'axios'
 import { NotFound } from 'http-errors'
 export default class QuotesService {
+ /**
+  * Fetch quotes and randomly return one quote
+  * @returns
+  */
  public static async quotes() {
   const result = await axios.get('https://type.fit/api/quotes')
-  const data = result.data
+  const quotes = result.data
 
-  if (data == null) {
+  if (quotes == null) {
    throw new NotFound('No quote found')
   }
 
-  return data
+  const quote = quotes[Math.floor(Math.random()*quotes.length)]
+
+  return quote
  }
 }
