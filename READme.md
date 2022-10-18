@@ -24,7 +24,7 @@ And lastly, run the devlopement server:
 
 ## Endpoints
 
-To make calls to the API endpoint, you would need a rest client like Postman or Insomnia.
+To make calls to the API endpoint, you would need a rest client like Postman, Insomnia or Thunder Client on VSCode.
 
 Also, for ease, the API collection has been included with the project. You can find it at the root directory of the project. It is name **thunder-collection_sbsc.json**.
 
@@ -38,7 +38,7 @@ Body:
 
 ```
 {
-  "firstName":"Elviwhs",
+  "firstName":"Elvis",
   "lastName":"Onobo",
   "email":"elvis@dev.com",
   "password":"123456"
