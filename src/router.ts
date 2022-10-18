@@ -9,4 +9,4 @@ export default router
 
 router.post('/auth/signup', AuthController.signup)
 router.post('/auth/login', AuthController.login)
-router.get('/quotes/fetch', authMiddleware, QuotesController.quotes)
+router.get('/quote/fetch', authMiddleware, QuotesController.quotes)
