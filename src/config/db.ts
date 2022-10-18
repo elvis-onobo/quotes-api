@@ -1,5 +1,6 @@
 import fs from 'fs/promises'
 import bcrypt from 'bcrypt'
+import {InternalServerError} from 'http-errors'
 import { SignupInterface } from '../interfaces/UserInterface'
 
 const saltRounds = 10 // use .env'
@@ -16,7 +17,12 @@ const create = async (content: any = null) => {
   throw new Error('Cannot save null values to file')
  }
 
- const hash: string = await bcrypt.hash(JSON.stringify(content), saltRounds)
+ const saltRounds = process.env.SALT_ROUNDS as string
+ if(saltRounds == null || saltRounds === undefined) {
+    throw new InternalServerError()
+ }
+
+ const hash: string = await bcrypt.hash(JSON.stringify(content), Number(saltRounds))
  let dbData = await fetch()
  if (dbData != null && dbData != '') {
   data = JSON.parse(dbData)

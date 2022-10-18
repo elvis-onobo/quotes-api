@@ -1,10 +1,10 @@
 import { Request } from 'express'
-import User from '../../src/models/User'
+import { UserInterface } from '../../src/interfaces/UserInterface'
 
 declare global {
  namespace Express {
   export interface Request {
-   user: User
+   user: UserInterface
   }
  }
 }
