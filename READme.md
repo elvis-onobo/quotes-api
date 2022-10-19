@@ -16,7 +16,7 @@ Traditionally you would be required to create your own **.env** file but since t
 
 Kindly note that while you will be able to make successful **signup** and **login** calls, you require **Docker** or more precisely **Redis** in order to be able to make calls to the quotes endpoint.
 
-Another approach to authentication which is not implemented here due to time constraints I have is to have the login also work with Redis, Especially for speed or response and for 2FA implementation. I may implement it if I find the time before the deadline is reached.
+Another approach to authentication which is not implemented here due to time constraints I have is to have the login also work with Redis, Especially for speed of response and for 2FA implementation. I may implement it if I find the time before the deadline is reached.
 
 So, run `docker-compose up -d` to bring up Redis.
 
@@ -26,7 +26,7 @@ And lastly, run the devlopement server:
 
 ## Endpoints
 
-To make calls to the API endpoint, you would need a rest client like Postman, Insomnia or Thunder Client on VSCode.
+To make calls to the API endpoint, you would need a rest client like Postman, Insomnia or Thunder Client on VSCode. Also, I would normally host documented APIs on Postman, but again, they have been documented here for ease and accessibility. 
 
 Also, for ease, the API collection has been included with the project. You can find it at the root directory of the project. It is named **thunder-collection_sbsc.json**.
 
